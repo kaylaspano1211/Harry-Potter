@@ -1,0 +1,188 @@
+
+
+body {
+    background-color: slategrey;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    color: goldenrod;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: ". . head-nav";
+
+}
+
+#head-nav {
+    color: goldenrod;
+    grid-area: head-nav;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+
+#head {
+    color: goldenrod;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "left-nav title right-nav";
+    height: 15vh;
+}
+
+#left-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: left-nav;
+    height: 15vh;
+    color: goldenrod;
+}
+
+#right-nav {
+    grid-area: right-nav;
+    height: 15vh;
+    width: 25vw;
+    color: goldenrod;
+}
+
+#user, #cart, #heart, #magnifying-glass {
+    color:goldenrod;
+}
+
+#left-nav > a {
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: goldenrod;
+    
+}
+
+#title {
+    display: flex;
+    grid-area: title;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    color: goldenrod;
+}
+
+#title > img {
+    height: 50%;
+}
+
+#title > h1 {
+    font-size: 4em;
+    padding-left: 3%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: goldenrod;
+
+}
+
+#currency {
+    border-style: none;
+    padding: 0;
+}
+
+header > p {
+    text-align: center;
+    background-color: black;
+    color: goldenrod;
+    padding: 5px 0px 5px 0px;
+    margin: 0;
+}
+
+#right-nav > ul > li:nth-child(2) {
+    border-left:1px solid gold;
+    
+}
+
+
+#main-grid {
+    margin: 20px;
+    padding: 0;
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "slogan main-gif"
+                         "slogan main-gif"
+                         "slogan main-gif";
+}
+
+#slogan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: slogan;
+}
+
+#slogan > p {
+    color: goldenrod;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    text-align: center;
+    margin: 0;
+    padding-left: 100px;
+    padding-right: 100px;
+
+
+}
+
+#main-gif {
+    margin-right: 10%;
+    grid-area: main-gif;
+}
+
+.button {
+    display: inline-block;
+    background-color: goldenrod;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 28px;
+    padding: 10px;
+    width: 250px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+  #footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "shipping free-returns shopping styles";
+    height: 15vh;
+  }
+
+
+
+  #Gryffindor {
+      display: flex;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 30px;
+      color: rgb(129, 12, 12);
+  }
+
+  #Slytherin {
+    display: flex;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color: rgb(11, 114, 17);
+}
+
+#Ravenclaw {
+    display: flex;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color: rgb(11, 26, 114);
+}
+
+#Hufflepuff {
+    display: flex;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color: rgb(180, 178, 38);
+}
+

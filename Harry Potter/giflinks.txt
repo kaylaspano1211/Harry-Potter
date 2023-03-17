@@ -1,0 +1,23 @@
+dock
+
+<img src="https://media3.giphy.com/media/nlQF7kFxZ0bcTbePIf/giphy.gif" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb pT0Scc KAlRDb" role="" aria-label="" alt="Hogwarts Legacy GIFs - Find &amp; Share on GIPHY" data-noaft="1" style="width: 552px; height: 311.328px; margin: 0px;">
+
+castle
+
+<!-- <video data-v-220309c9="" autoplay="autoplay" muted="muted" loop="loop" playsinline="" src="https://cdn-hogwartslegacy.warnerbrosgames.com/home/hero.mp4?c=b" class="trailer-video"><source type="video/mp4" src="https://cdn-hogwartslegacy.warnerbrosgames.com/home/hero.mp4?c=b" preload="auto"></video> -->
+
+gryffindor
+
+<img src="https://media.tenor.com/mbb_vsQMsVoAAAAM/gryffindor-harrypotter.gif" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb pT0Scc KAlRDb" role="" aria-label="" alt="Gryffindor GIFs | Tenor" data-noaft="1" style="width: 194.167px; height: 233px; margin: 0px;">
+
+slytherin
+
+<img src="https://media.tenor.com/qt8yMpX9F7gAAAAC/harry-potter-slytherin.gif" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb pT0Scc KAlRDb" role="" aria-label="" alt="Harry Potter Slytherin GIF - Harry Potter Slytherin Logo ..." data-noaft="1" style="width: 194.167px; height: 233px; margin: 0px;">
+
+ravenclaw
+
+<img src="https://media.tenor.com/Sgm7TzrEQzAAAAAM/harry-potter-ravenclaw.gif" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb pT0Scc KAlRDb" role="" aria-label="" alt="Ravenclaw GIFs | Tenor" data-noaft="1" style="width: 194.167px; height: 233px; margin: 0px;">
+
+hufflepuff
+
+<img src="https://media1.giphy.com/media/PMp40oEvNfKve/giphy.gif" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb pT0Scc KAlRDb" role="" aria-label="" alt="Harry-potter-hufflepuff GIFs - Find &amp; Share on GIPHY" data-noaft="1" style="width: 194.167px; height: 233px; margin: 0px;">
