@@ -42,6 +42,8 @@ header {
 }
 
 #right-nav {
+    display: flex;
+    flex-direction: row;
     grid-area: right-nav;
     height: 15vh;
     width: 25vw;
@@ -53,6 +55,13 @@ header {
 }
 
 #left-nav > a {
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: goldenrod;
+    
+}
+
+#right-nav > a {
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: goldenrod;
@@ -151,15 +160,19 @@ header > p {
 
   #footer {
     display: grid;
+    align-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "shipping free-returns shopping styles";
+    column-gap: 20px;
+    grid-template-areas: "Gryffindor Slytherin Ravenclaw Hufflepuff";
     height: 15vh;
+    margin: 20%;
   }
 
 
 
   #Gryffindor {
       display: flex;
+      grid-area: Gryffindor;
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       font-size: 30px;
       color: rgb(129, 12, 12);
@@ -167,6 +180,7 @@ header > p {
 
   #Slytherin {
     display: flex;
+    grid-area: Slytherin;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 30px;
     color: rgb(11, 114, 17);
@@ -174,6 +188,7 @@ header > p {
 
 #Ravenclaw {
     display: flex;
+    grid-area: Ravenclaw;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 30px;
     color: rgb(11, 26, 114);
@@ -181,6 +196,7 @@ header > p {
 
 #Hufflepuff {
     display: flex;
+    grid-area: Hufflepuff;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 30px;
     color: rgb(180, 178, 38);
