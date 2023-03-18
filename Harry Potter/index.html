@@ -10,15 +10,14 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <video data-v-220309c9="" autoplay="autoplay" muted="muted" loop="loop" playsinline="" src="https://cdn-hogwartslegacy.warnerbrosgames.com/home/hero.mp4?c=b" class="trailer-video"><source type="video/mp4" src="https://cdn-hogwartslegacy.warnerbrosgames.com/home/hero.mp4?c=b" preload="auto"></video>
-    <header>
+    <header id="above-video">
         <nav id="head-nav">
-            <ul>
+            <ul class="icons">
                 <li>
-                    <select id="currency" name="currency" style="width: 50px">
-                        <option>USD</option>
-                        <option value="BTC">Bitcoin</option>
-                        <option value="CAD">Canadian Dollar</option>
+                    <select id="language" name="language" style="width: 60px">
+                        <option>Eng</option>
+                        <option value="French">Fr</option>
+                        <option value="Spanish">Sp</option>
                     </select>
                 </li>
                 <li>
@@ -35,48 +34,55 @@
                 </li>
             </ul>
         </nav>
-    </header>
-    <header id="head">
         <nav id="left-nav">
-            <a href="#">Media</a>
-            <a href="#">Fact</a>
-            <a href="#">Community</a>
+            <a href="#"><i id="hat" class="fa-solid fa-hat-wizard"></i>Media</a>
+            <a href="#"><i id="wand" class="fa-solid fa-wand-sparkles"></i>Fact</a>
+            <a href="#"><i id="butterbeer" class="fa-solid fa-beer-mug-empty"></i>Community</a>
         </nav>
         <div id="title">
-            <h1>Hogwarts Legacy</h1>
+            <h1><span>Welcome to Hogwarts</span></h1>
         </div>
         <nav id="right-nav">
-            <a href="#">Stay Connected</a>
-            <a href="#">Buy Now</a>
+            <a href="#"><i id="mail" class="fa-regular fa-envelope"></i></i>Stay Connected</a>
+            <a href="#"><i id="gringotts" class="fa-solid fa-coins"></i>Buy Now</a>
         </nav>
     </header>
+
+    
+        <video data-v-220309c9="" id="top-video" autoplay="autoplay" muted="muted" loop="loop" playsinline="" src="https://cdn-hogwartslegacy.warnerbrosgames.com/home/hero.mp4?c=b" class="trailer-video"><source type="video/mp4" src="https://cdn-hogwartslegacy.warnerbrosgames.com/home/hero.mp4?c=b" preload="auto"></video>
+
+    
     <main id="main-grid">
-        <div id="slogan">
-            <p>Start Your Adventure</p>
-            <button class="button" style="vertical-align:middle"><span>Play Now<i class="gg-arrow-right"></i></span></button>
-        </div>
+
+
         <div id="main-gif">
             <img src="https://media.tenor.com/2wkqgMl7Kw8AAAAC/hogwarts-legacy-warner-bros-interactive-entertainment.gif" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb pT0Scc KAlRDb" role="" aria-label="" alt="Hogwarts Legacy Warner Bros Interactive Entertainment GIF ..." data-noaft="1" style="width: 552px; height: 310.361px; margin: 0px;">
+        </div>
+
+        <div id="slogan">
+            <p><span>Start Your Adventure</span></p>
+            <button class="button" style="vertical-align:middle" href="#">Play Now<i class="gg-arrow-right"></i></button>
         </div>
     </main>
 
     
 
     <footer id="footer">
+        <p><span>Choose Your House</span></p>
         <div id="Gryffindor">
-            <img src="https://media.tenor.com/mbb_vsQMsVoAAAAM/gryffindor-harrypotter.gif" id="gryff-gif" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb pT0Scc KAlRDb" role="" aria-label="" alt="Gryffindor GIFs | Tenor" data-noaft="1" style="width: 194.167px; height: 233px; margin: 0px;">
+            <img src="https://media.tenor.com/mbb_vsQMsVoAAAAM/gryffindor-harrypotter.gif" id="gryff-gif" class="gif"  style="width: 194.167px; height: 233px; margin: 0px;">
 
         </div>
         <div id="Slytherin">
-            <img src="https://media.tenor.com/qt8yMpX9F7gAAAAC/harry-potter-slytherin.gif" id="sly-gif" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb pT0Scc KAlRDb" role="" aria-label="" alt="Harry Potter Slytherin GIF - Harry Potter Slytherin Logo ..." data-noaft="1" style="width: 194.167px; height: 233px; margin: 0px;">
+            <img src="https://media.tenor.com/qt8yMpX9F7gAAAAC/harry-potter-slytherin.gif" id="sly-gif" class="gif" style="width: 194.167px; height: 233px; margin: 0px;">
             
         </div>
         <div id="Ravenclaw">
-            <img src="https://media.tenor.com/Sgm7TzrEQzAAAAAM/harry-potter-ravenclaw.gif" id="raven-gif" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb pT0Scc KAlRDb" role="" aria-label="" alt="Ravenclaw GIFs | Tenor" data-noaft="1" style="width: 194.167px; height: 233px; margin: 0px;">
+            <img src="https://media.tenor.com/Sgm7TzrEQzAAAAAM/harry-potter-ravenclaw.gif" id="raven-gif" class="gif" style="width: 194.167px; height: 233px; margin: 0px;">
 
         </div>
         <div id="Hufflepuff">
-            <img src="https://media1.giphy.com/media/PMp40oEvNfKve/giphy.gif" id="huffle-gif" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb pT0Scc KAlRDb" role="" aria-label="" alt="Harry-potter-hufflepuff GIFs - Find &amp; Share on GIPHY" data-noaft="1" style="width: 194.167px; height: 233px; margin: 0px;">
+            <img src="https://media1.giphy.com/media/PMp40oEvNfKve/giphy.gif" id="huffle-gif" class="gif" style="width: 194.167px; height: 233px; margin: 0px;">
         </div>
 
     </footer>

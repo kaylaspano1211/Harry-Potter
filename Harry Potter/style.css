@@ -1,53 +1,107 @@
+@font-face {
+    font-family: myHPFont;
+    src: url(HarryP-MVZ6w.ttf);
+}
+
 
 
 body {
-    background-color: slategrey;
+    display: grid;
+    
+    grid-template-areas: "above-video"
+                        "main-grid"
+                        "footer";
+    background: linear-gradient(320deg, rgb(151, 10, 10) 10%, rgb(16, 133, 16) 30%, rgb(15, 15, 173) 50%, rgb(179, 154, 12) 70%);
     margin: 0;
     padding: 0;
+    row-gap: 50vh;
+    grid-template-rows: 1fr 2fr 2fr;
 }
 
-header {
-    color: goldenrod;
+#above-video {
+    grid-area: above-video;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: ". . head-nav";
-
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1.5em 2em;
+    grid-template-areas: "head-nav head-nav head-nav"
+                        "left-nav title right-nav";
 }
 
 #head-nav {
-    color: goldenrod;
-    grid-area: head-nav;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    list-style: none;
+    color: goldenrod;
+    grid-area: head-nav;
+    background-color: black;
+    height: 1.5em;
 }
 
+#head-nav > ul.icons {
+    display: flex;
+    list-style: none;
+    flex-grow: 1;
+    justify-content: space-around;
+}
+
+#video-text {
+    position: relative;
+    text-align: center;
+    grid-area: video-text;
+  }
+
+#slogan {
+    grid-area: slogan;
+    bottom: 50px;
+    right: 16px;
+  }
+
+
+#top-video {
+    width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+
+
 #head {
+    grid-area: head;
     color: goldenrod;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "left-nav title right-nav";
-    height: 15vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "left-nav title title right-nav";
+
 }
 
 #left-nav {
+    background:linear-gradient(90deg, rgb(101,116,205, .4), rgb(101,116,205, .1)) ;
+    
     display: flex;
     justify-content: space-around;
     align-items: center;
     grid-area: left-nav;
-    height: 15vh;
     color: goldenrod;
+    font-size: 20px;
+    height: 1.5em;
 }
 
 #right-nav {
     display: flex;
-    flex-direction: row;
+    background-color: black;
+    justify-content: space-evenly;
+    align-items: center;
     grid-area: right-nav;
-    height: 15vh;
-    width: 25vw;
+    font-family: myHPFont, Georgia, 'Times New Roman', Times, serif;
     color: goldenrod;
+    font-size: 20px;
 }
 
 #user, #cart, #heart, #magnifying-glass {
@@ -56,42 +110,60 @@ header {
 
 #left-nav > a {
     text-decoration: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: goldenrod;
+    font-family: myHPFont, Georgia, 'Times New Roman', Times, serif;
+    color:  goldenrod;
     
 }
 
 #right-nav > a {
     text-decoration: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: myHPFont, Georgia, 'Times New Roman', Times, serif;
     color: goldenrod;
-    
 }
 
 #title {
     display: flex;
     grid-area: title;
     justify-content: center;
-    align-items: center;
-    height: 15vh;
-    color: goldenrod;
+    font-size: 40px;
 }
 
-#title > img {
-    height: 50%;
+#title span, #slogan span {
+    transform: translate(-50%,-50%);
+    font-family: myHPFont, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 5px;
+    font-weight: bold;
+    background-image: linear-gradient(
+     to right,
+     #462523 0,
+            #cb9b51 22%, 
+     #f6e27a 45%,
+     #f6f2c0 50%,
+     #f6e27a 55%,
+     #cb9b51 78%,
+     #462523 100%
+     );
+    color:transparent;
+    -webkit-background-clip:text;
 }
 
-#title > h1 {
-    font-size: 4em;
-    padding-left: 3%;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: goldenrod;
+/* #title h1 {
+    margin-top: 0;
+    padding-top: 0;
+} */
 
+.button {
+    opacity: .65;
+    border-radius: 45%;
 }
 
-#currency {
+#language {
     border-style: none;
     padding: 0;
+}
+
+#language:hover {
+    background-color: goldenrod;
 }
 
 header > p {
@@ -102,21 +174,15 @@ header > p {
     margin: 0;
 }
 
-#right-nav > ul > li:nth-child(2) {
-    border-left:1px solid gold;
-    
-}
-
 
 #main-grid {
     margin: 20px;
     padding: 0;
     display: grid;
+    grid-area: main-grid;
     column-gap: 20px;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "slogan main-gif"
-                         "slogan main-gif"
-                         "slogan main-gif";
+    grid-template-areas: "slogan main-gif";
 }
 
 #slogan {
@@ -140,17 +206,22 @@ header > p {
 }
 
 #main-gif {
+    padding-top: 20%;
     margin-right: 10%;
     grid-area: main-gif;
 }
 
 .button {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: goldenrod;
     border: none;
+    font-family: myHPFont, Georgia, 'Times New Roman', Times, serif;
     color: black;
-    text-align: center;
-    font-size: 28px;
+    font-weight: bold;
+    font-size: 35px;
+    letter-spacing: 5px;
     padding: 10px;
     width: 250px;
     transition: all 0.5s;
@@ -159,47 +230,72 @@ header > p {
   }
 
   #footer {
+    background-color: black;
+      grid-area: footer;
     display: grid;
+    justify-content: space-evenly;
     align-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 20px;
-    grid-template-areas: "Gryffindor Slytherin Ravenclaw Hufflepuff";
-    height: 15vh;
-    margin: 20%;
+    column-gap: 40px;
+    grid-template-areas: ". choice choice ."
+                         "Gryffindor Slytherin Ravenclaw Hufflepuff";
+                         padding-bottom: 20vh;
   }
 
-
+  #footer p {
+      grid-area: choice;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      font-family: myHPFont, Georgia, 'Times New Roman', Times, serif;
+      color: black;
+      font-weight: bolder;
+      font-size: 70px;
+      
+  }
 
   #Gryffindor {
       display: flex;
       grid-area: Gryffindor;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      font-size: 30px;
-      color: rgb(129, 12, 12);
+      justify-content: center;
+      
   }
 
   #Slytherin {
     display: flex;
     grid-area: Slytherin;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 30px;
-    color: rgb(11, 114, 17);
+    justify-content: center;
 }
 
 #Ravenclaw {
     display: flex;
     grid-area: Ravenclaw;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 30px;
-    color: rgb(11, 26, 114);
+    justify-content: center;
 }
 
 #Hufflepuff {
     display: flex;
     grid-area: Hufflepuff;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: center;
+}
+
+.static {
+    position: absolute;
+}
+.static:hover {
+    opacity: .5;
+}
+
+#left-nav > a:hover {
+    background-color: goldenrod;
+    color: black;
     font-size: 30px;
-    color: rgb(180, 178, 38);
+}
+#right-nav > a:hover {
+    background-color: goldenrod;
+    color: black;
+    font-size: 30px;
 }
 
 
