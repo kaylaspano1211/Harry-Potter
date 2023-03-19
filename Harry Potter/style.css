@@ -9,7 +9,6 @@
 
 body {
     display: grid;
-    
     grid-template-areas: "above-video"
                         "main-grid"
                         "footer";
@@ -96,8 +95,6 @@ body {
     justify-content: space-evenly;
     align-items: center;
     grid-area: left-nav;
-    font-size: 20px;
-    height: 1.5em;
 
     border-bottom: 3px solid goldenrod;
     border-bottom-right-radius: 8px;
@@ -112,7 +109,6 @@ body {
     justify-content: space-evenly;
     align-items: center;
     grid-area: right-nav;
-    font-size: 20px;
 
     border-bottom: 3px solid goldenrod;
     border-bottom-left-radius: 8px;
@@ -133,12 +129,16 @@ body {
     text-decoration: none;
     font-family: myHPFont, Georgia, 'Times New Roman', Times, serif;
     color:  slateblue;
+    font-size: 20px;
+    letter-spacing: 3px;
 }
 
 #right-nav > a {
     text-decoration: none;
     font-family: myHPFont, Georgia, 'Times New Roman', Times, serif;
     color: slateblue;
+    font-size: 20px;
+    letter-spacing: 3px;
 }
 
 #title {
@@ -240,7 +240,7 @@ header > p {
 
   #footer {
     border-top: 7px solid black;
-    background: linear-gradient(320deg, rgb(151, 10, 10) 25%, rgb(16, 133, 16) 50%, rgb(15, 15, 173) 75%, rgb(179, 154, 12) 100%);
+    background-color: rgba(0, 0, 0, 0.596);
     grid-area: footer;
     display: grid;
     justify-content: space-evenly;
@@ -253,19 +253,31 @@ header > p {
     
   }
 
-  #footer p {
-      grid-area: choice;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      font-family: myHPFont, Georgia, 'Times New Roman', Times, serif;
-      color: black;
-      font-weight: bolder;
-      font-size: 70px;
-      letter-spacing: 5px;
-      
-  }
+  #choice {
+    grid-area: choice;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    font-family: myHPFont, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 5px;
+    font-weight: bold;
+    background-image: linear-gradient(
+    to right,
+   #462523 0,
+          #cb9b51 22%, 
+   #f6e27a 45%,
+   #f6f2c0 50%,
+   #f6e27a 55%,
+   #cb9b51 78%,
+   #462523 100%
+   );
+   color:transparent;
+   -webkit-background-clip:text;
+   font-size: 70px;
+   text-align: center;
+}
 
   #Gryffindor {
       display: flex;
