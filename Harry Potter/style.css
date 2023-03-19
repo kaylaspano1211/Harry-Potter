@@ -13,7 +13,7 @@ body {
                         "footer";
     margin: 0;
     padding: 0;
-    row-gap: 50vh;
+    /* row-gap: 50vh; */
     grid-template-rows: 1fr 2fr 2fr;
 }
 
@@ -136,9 +136,8 @@ body {
 }
 
 #title {
-    display: flex;
+    
     grid-area: title;
-    justify-content: center;
     font-size: 40px;
 }
 
@@ -194,8 +193,7 @@ header > p {
     justify-content: center;
     align-items: center;
     grid-area: slogan;
-    bottom: 50px;
-    right: 16px;
+    
   }
 
 #slogan > p {
@@ -238,9 +236,10 @@ header > p {
     background: linear-gradient(320deg, rgb(151, 10, 10) 10%, rgb(16, 133, 16) 30%, rgb(15, 15, 173) 50%, rgb(179, 154, 12) 70%);
     grid-area: footer;
     display: grid;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    
     column-gap: 40px;
     grid-template-areas: ". choice choice ."
                          "Gryffindor Slytherin Ravenclaw Hufflepuff";
@@ -257,7 +256,6 @@ header > p {
       color: black;
       font-weight: bolder;
       font-size: 70px;
-      margin-bottom: 0;
       
   }
 
@@ -286,14 +284,64 @@ header > p {
     justify-content: center;
 }
 
-.gif {
+/* .gif {
     position: absolute;
 }
+*/
 .gif:hover {
     opacity: .5;
+} 
+
+@media screen and (max-width: 450px) {
+    #body {
+        
+        grid-template-areas: "above-video"
+                        "main-grid"
+                        "footer";
+        grid-template-rows: 1fr 2fr 1fr;
+    }
+    #top-video {
+        width: auto;
+      height: 100%;
+      object-fit: cover;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+
+    #above-video {
+        grid-area: above-video;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1.5em 2em;
+        grid-template-areas: "head-nav head-nav"
+                            "left-nav right-nav"
+                            "title title";
+    }
+
+    #title {
+        text-align: center;
+    }
+
+
+    #footer {
+        grid-template-areas: "choice"
+                         "Gryffindor" 
+                         "Slytherin"
+                         "Ravenclaw" 
+                         "Hufflepuff";
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+
+    #main-gif {
+        align-self: center;
+        padding-top: 0;
+    }
 }
-
-
 
 
 /* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/user/use-1/use160.cur), auto !important;} /* End https://www.cursors-4u.com */
