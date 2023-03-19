@@ -16,20 +16,33 @@ body {
     padding: 0;
     /* row-gap: 50vh; */
     grid-template-rows: 1fr 2fr 2fr;
+    width: 100%;
+    height: auto;
 }
 
 #above-video {
+    margin: 0;
+    padding: 0;
     grid-area: above-video;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1.5em 2em;
     grid-template-areas: "head-nav head-nav head-nav"
                         "left-nav title right-nav";
+    width: 100%;
+    height: auto;
 }
 
 #language {
+    background-color: goldenrod;
     border-style: none;
     padding: 0;
+    border-radius: 8px;
+}
+
+#language:hover {
+    background: slateblue;
+    color: gold;    
 }
 
 #head-nav {
@@ -82,8 +95,12 @@ body {
 #head {
     grid-area: head;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "left-nav title title right-nav";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "left-nav title right-nav";
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
 
 }
 
@@ -142,7 +159,9 @@ body {
 }
 
 #title {
-    
+    display: flex;
+    justify-content: center;
+    /* align-self: center; */
     grid-area: title;
     font-size: 40px;
 }
@@ -155,7 +174,7 @@ body {
     background-image: linear-gradient(
      to right,
      #462523 0,
-            #cb9b51 22%, 
+     #cb9b51 22%, 
      #f6e27a 45%,
      #f6f2c0 50%,
      #f6e27a 55%,
@@ -184,13 +203,15 @@ header > p {
 
 
 #main-grid {
-    margin: 20px;
+    margin: 0;
     padding: 0;
     display: grid;
     grid-area: main-grid;
-    column-gap: 20px;
+    column-gap: 10px;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "slogan main-gif";
+    width: 100%;
+    height: auto;
 }
 
 #slogan {
@@ -208,13 +229,14 @@ header > p {
     font-size: 50px;
     text-align: center;
     margin: 0;
-    padding-left: 100px;
-    padding-right: 100px;
+    /* padding-left: 100px;
+    padding-right: 100px; */
 }
 
 #main-gif {
-    padding-top: 20%;
-    margin-right: 10%;
+    margin-top: 20%;
+    justify-self: center;
+    align-self: center;
     grid-area: main-gif;
 }
 
@@ -238,18 +260,26 @@ header > p {
     border-radius: 45%;
   }
 
+  .button:hover {
+      background-color: slateblue;
+      color: goldenrod;
+  }
+
   #footer {
     border-top: 7px solid black;
     background-color: rgba(0, 0, 0, 0.596);
     grid-area: footer;
     display: grid;
-    justify-content: space-evenly;
-    align-content: center;
+    justify-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 30px;
+    column-gap: 70px;
+    row-gap: 2px;
     grid-template-areas: ". choice choice ."
                          "Gryffindor Slytherin Ravenclaw Hufflepuff";
-    height: 100vh;
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 2%;
     
   }
 
@@ -310,7 +340,126 @@ header > p {
 
 .gif:hover {
     opacity: .5;
-} 
+}
+
+.gryff-border {
+    border-width: 3px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 210px;
+    height: 245px;
+    background: transparent;
+      background: linear-gradient(
+        60deg,
+        hsl(0, 73%, 22%),
+        hsl(0, 85%, 35%),
+        hsl(44, 86%, 38%),
+        hsl(0, 85%, 35%),
+        hsl(0, 73%, 22%)
+      );
+    border-radius: 8px;
+    }
+
+.slyth-border {
+    border-width: 3px;
+    position: relative;
+    display: flex;
+     justify-content: center;
+    align-items: center;
+    width: 210px;
+    height: 245px;
+    background: transparent;
+    background: linear-gradient( 60deg,
+            hsl(128, 79%, 19%),
+            hsl(103, 94%, 34%),
+            silver,
+            hsl(103, 94%, 34%),
+            hsl(128, 79%, 19%)
+          );
+    border-radius: 8px;
+}
+
+.rav-border {
+    border-width: 3px;
+    position: relative;
+    display: flex;
+     justify-content: center;
+    align-items: center;
+    width: 210px;
+    height: 245px;
+    background: transparent;
+    background: linear-gradient( 60deg,
+            hsl(224, 93%, 37%),
+            hsl(224, 93%, 37%),
+            silver,
+            hsl(224, 93%, 37%),
+            hsl(224, 93%, 37%)
+          );
+    border-radius: 8px;
+}
+
+.huff-border {
+    border-width: 3px;
+    position: relative;
+    display: flex;
+     justify-content: center;
+    align-items: center;
+    width: 210px;
+    height: 245px;
+    background: transparent;
+    background: linear-gradient( 60deg,
+            rgb(168, 127, 21),
+            rgba(255, 217, 0, 0.726),
+            yellow,
+            rgba(255, 217, 0, 0.726),
+            rgb(168, 127, 21)
+          );
+    border-radius: 8px;
+}
+
+#ravenclaw-logo {   
+    height: 50%;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    position: relative;
+}
+
+#hufflepuff-logo{  
+    height: 50%;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    position: relative;
+}
+
+/* #slytherin-logo{
+    top: auto;  
+    bottom: 0;
+    left: 0;
+    height: 40%;
+    position: relative;
+}
+
+#gryffindor-logo{
+    position:relative;
+    top: auto;
+    bottom: 0;
+    right: 0;
+    height: 40%;
+    /* margin-left: 243%;
+    height: 40%;
+}  */
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 450px) {
     #body {
