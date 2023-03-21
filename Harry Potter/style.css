@@ -272,10 +272,12 @@ header > p {
     display: grid;
     justify-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 70px;
+    column-gap: 50px;
     row-gap: 2px;
     grid-template-areas: ". choice choice ."
-                         "Gryffindor Slytherin Ravenclaw Hufflepuff";
+                         "Gryffindor Slytherin Ravenclaw Hufflepuff"
+                         "slytherin-logo professor professor gryffindor-logo";
+
     height: auto;
     width: 100%;
     margin: 0;
@@ -424,7 +426,6 @@ header > p {
     top: 0;
     left: 0;
     bottom: auto;
-    position: relative;
 }
 
 #hufflepuff-logo{  
@@ -432,26 +433,103 @@ header > p {
     top: 0;
     right: 0;
     bottom: auto;
-    position: relative;
 }
 
-/* #slytherin-logo{
+#slytherin-logo{
+    grid-area: slytherin-logo;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
     top: auto;  
     bottom: 0;
     left: 0;
-    height: 40%;
-    position: relative;
+    height: 50%;
 }
 
 #gryffindor-logo{
-    position:relative;
+    grid-area: gryffindor-logo;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
     top: auto;
     bottom: 0;
     right: 0;
-    height: 40%;
+    height: 50%;
     /* margin-left: 243%;
-    height: 40%;
-}  */
+    height: 40%; */
+}
+
+#professor > p {
+    font-family: myHPFont, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 5px;
+    font-weight: bold;
+    background-image: linear-gradient(
+    to right,
+   #462523 0,
+   #cb9b51 22%, 
+   #f6e27a 45%,
+   #f6f2c0 50%,
+   #f6e27a 55%,
+   #cb9b51 78%,
+   #462523 100%
+   );
+   color:transparent;
+   -webkit-background-clip:text;
+   font-size: 70px;
+   text-align: center;
+}
+
+#professor {
+    grid-area: professor;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 30%;
+}
+
+
+
+.shape-outer {
+    display: flex;
+    flex-shrink: 0;
+    height: calc(150px + 4vw);
+    width: calc(150px + 4vw);
+    margin: 25px;
+    background-image: linear-gradient(to bottom right,
+     #462523 0,
+     #cb9b51 22%, 
+     #f6e27a 45%,
+     #f6f2c0 50%,
+     #f6e27a 55%,
+     #cb9b51 78%,
+     #462523 100%);
+}
+
+#steve-inner-hexagon {	
+    height: calc(130px + 4vw);
+    width: calc(130px + 4vw);
+    background: url("photos/steve.jpg") no-repeat center;
+    background-size: cover;
+    margin: auto;
+}
+
+#john-inner-octagon {
+    height: calc(130px + 4vw);
+    width: calc(130px + 4vw);
+    background: url("photos/john.jpg") no-repeat center;
+    background-size: cover;
+    margin: auto;
+}
+
+.hexagon {
+    -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    		clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.octagon {
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    		clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
 
 
 
@@ -460,14 +538,50 @@ header > p {
 
 
 
-
+@media screen and (max-width: 1024px) {
+    #top-video {
+        width: auto;
+      height: 100%;
+      object-fit: cover;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+    #footer {
+        grid-template-areas: "choice choice"
+                         "Gryffindor Slytherin"
+                         "Ravenclaw Hufflepuff"
+                         "professor professor";
+        grid-template-columns: 1fr 1fr;
+        row-gap: 20px;
+    }
+    #above-video {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1.5em 2em;
+        grid-template-areas: "head-nav head-nav"
+                            "left-nav right-nav"
+                            "title title";
+    }
+    #title {
+        text-align: center;
+    }
+    #slogan {
+        justify-content: center;
+        align-items: center;
+      }
+    #main-gif {
+        align-self: flex-start;
+    }
+}
 @media screen and (max-width: 450px) {
-    #body {
-        
+    body {
         grid-template-areas: "above-video"
                         "main-grid"
                         "footer";
-        grid-template-rows: 1fr 2fr 1fr;
+        grid-template-rows: .5fr auto 1fr;
     }
     #top-video {
         width: auto;
@@ -480,35 +594,41 @@ header > p {
       bottom: 0;
       z-index: -1;
     }
-
     #above-video {
-        grid-area: above-video;
-        display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1.5em 2em;
         grid-template-areas: "head-nav head-nav"
                             "left-nav right-nav"
                             "title title";
     }
-
     #title {
         text-align: center;
     }
-
-
     #footer {
         grid-template-areas: "choice"
-                         "Gryffindor" 
+                         "Gryffindor"
                          "Slytherin"
-                         "Ravenclaw" 
-                         "Hufflepuff";
+                         "Ravenclaw"
+                         "Hufflepuff"
+                         "professor"
+                         "professor";
         grid-template-columns: 1fr;
         row-gap: 20px;
     }
-
     #main-gif {
-        align-self: center;
-        padding-top: 0;
+        display: none;
+    }
+    #main-grid {
+        column-gap: 10px;
+        grid-template-columns: 1fr;
+        grid-template-areas: "slogan";
+    }
+    #hufflepuff-logo, #ravenclaw-logo, #slytherin-logo, #gryffindor-logo {
+        display: none;
+    }
+
+    #professor {
+        flex-wrap: wrap;
     }
 }
 

@@ -8,7 +8,9 @@ const english = new Map([
     ['welcome_to_hogwarts', 'Welcome to Hogwarts'],
     ['stay_connected', 'Stay Connected'],
     ['buy_now', 'Buy Now'],
-    ['choose_your_house', 'Choose Your House']
+    ['choose_your_house', 'Choose Your House'],
+    ['professor_steve', 'Professor Steve'],
+    ['professor_john', 'Professor John']
 ]);
 
 const french = new Map([
@@ -20,10 +22,24 @@ const french = new Map([
     ['welcome_to_hogwarts', 'Bienvenue a Hogwarts'],
     ['stay_connected', 'Rester Connecte'],
     ['buy_now', 'Acheter Maintenant'],
-    ['choose_your_house', 'Choisissez Votre Maison']
-
-
+    ['choose_your_house', 'Choisissez Votre Maison'],
+    ['professor_steve', 'Professeur Steve'],
+    ['professor_john', 'Professeur John']
 ]);
+
+const somali = new Map ([
+    ['begin_your_adventure', 'Bilow Tacaburkaaga'],
+    ['play_now', 'Ciyaar Imika'],
+    ['media', 'Warbaahinta'],
+    ['fact', 'Xaqiiqda'],
+    ['community', 'Bulshada'],
+    ['welcome_to_hogwarts', 'Ku Soo Dhawoow Hogwarts'],
+    ['stay_connected', 'Ku Xidhnow'],
+    ['buy_now', 'Hadda Iibso'],
+    ['choose_your_house', 'Dooro Gurigaaga'],
+    ['professor_steve', 'Macalinka Steve'],
+    ['professor_john', 'Macalinka John']
+])
 
 function translate(attribute, language) {
     // collects every element in the body 
@@ -35,9 +51,11 @@ function translate(attribute, language) {
         if(key != null) {
             // Overwrite the innerHTML depending on what language was selected
             if(language === 'french') {
-                element.innerHTML = french.get(key);
+                element.textContent = french.get(key);
             } else if(language === 'english') {
-                element.innerHTML = english.get(key);
+                element.textContent = english.get(key);
+            } else if (language === 'somali') {
+                element.textContent = somali.get(key);
             }
         }
     }
